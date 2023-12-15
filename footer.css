@@ -1,0 +1,11 @@
+footer {
+    background-color: blue; /* Choose your desired background color */
+    color: #fff; /* Choose your desired text color */
+    padding: 20px; /* Adjust the padding as needed */
+
+}
+
+.footer label{
+    color: black;
+    text-decoration: underline;
+}
