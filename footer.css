@@ -1,11 +1,17 @@
-footer {
-    background-color: blue; /* Choose your desired background color */
-    color: #fff; /* Choose your desired text color */
-    padding: 20px; /* Adjust the padding as needed */
+/* footer.css */
 
-}
-
-.footer label{
-    color: black;
-    text-decoration: underline;
-}
+.footer {
+    background-color: #f0d9b5; /* Light sandy color for the beach */
+    padding: 20px;
+    text-align: center;
+    color: #2c3e50; /* Dark blue for text */
+    font-size: 16px;
+    border-top: 2px solid #3498db; /* Ocean blue border at the top */
+  }
+  
+  .footer label {
+    font-weight: bold;
+  }
+  
+  /* Add more styles as needed */
+  
