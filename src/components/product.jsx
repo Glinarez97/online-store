@@ -1,6 +1,7 @@
+import DataService from '../services/dataService';
 import "./product.css";
 import QuantityPicker from "./quantityPicker";
-import { useEffec, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Product(props) {
   const [quantity, setQuantity] = useState(1);
@@ -11,6 +12,9 @@ function Product(props) {
 
   function add() {
     console.log("add clicked");
+
+    var service = new DataService();
+    service.addProdToCart(props.data);
   }
 
   function quantityChange(qty) {

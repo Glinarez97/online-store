@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useState, useState } from "react";
 import "./admin.css";
+import DataService from '../services/dataService';
 
 function Admin() {
   const [usd, setUsd] = useState(0);
   const [first, setFirst] = useState('');
   const [last, setLast] = useState('');
+  const [allProducts, setAllproducts] = useState([]);
+
+  // when the page loads, get the products
+  useEffect(function(){
+    let service = new DataService();
+    let prods = service.getProduct();
+  }, []);
 
   function apply() {
     console.log("Button clicked");

@@ -49,7 +49,6 @@ let catalog = [
         "_id": "7",
     }, 
     
-   
 ];
 
 class DataService
@@ -57,6 +56,25 @@ class DataService
     getProducts()
     {
         return catalog;
+    }
+
+    addProdToCart(product){
+        let cart = this.readCart();
+
+        cart.push(product);
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    readCart() {
+        const cartString = localStorage.getItem("cart"); // string
+
+        // parse the string to an array
+        if(cartString) {
+            return JSON.parse(cartString)
+        } else {
+            return []; //empty cart
+        }
     }
 }
 
